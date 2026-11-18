@@ -6,7 +6,7 @@
     <title>AI Shorts Studio Pro v2.4 — Viral Shorts Creator for Windows</title>
     <link rel="icon" href="Designer.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+    <script src="https://gumroad.com/js/gumroad.js"></script>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased">
 
@@ -38,12 +38,15 @@
         <p class="text-slate-400 text-lg max-w-2xl mx-auto mb-9">
             AI Shorts Studio Pro v2.4 is a Windows desktop utility that finds high-retention moments offline, crops to vertical 1080×1920, and burns animated word-by-word captions—with zero cloud fees or API keys.
         </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="#pricing" class="bg-gradient-to-r from-indigo-600 to-pink-600 hover:opacity-95 text-white font-bold px-8 py-4 rounded-xl text-base shadow-lg shadow-indigo-600/25 transition">
-                Get Lifetime License — $29
+        <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
+            <a href="https://khubaib60.gumroad.com/l/aishortsstudiopro?variant=Personal%20Creator&wanted=true" class="gumroad-button bg-gradient-to-r from-indigo-600 to-purple-600 hover:opacity-95 text-white font-bold px-7 py-4 rounded-xl text-base shadow-lg shadow-indigo-600/25 transition">
+                Personal License — $29
             </a>
-            <a href="#download" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold px-8 py-4 rounded-xl text-base transition">
-                ⬇ Download Windows Installer (v2.4)
+            <a href="https://khubaib60.gumroad.com/l/aishortsstudiopro?variant=Studio%20%2F%20Agency&wanted=true" class="gumroad-button bg-gradient-to-r from-purple-600 to-pink-600 hover:opacity-95 text-white font-bold px-7 py-4 rounded-xl text-base shadow-lg shadow-pink-600/25 transition">
+                Studio / Agency (3 PCs) — $69
+            </a>
+            <a href="#download" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold px-7 py-4 rounded-xl text-base transition">
+                ⬇ Download Installer (v2.4)
             </a>
         </div>
     </header>
@@ -94,9 +97,9 @@
                         <li>✓ Free v2.x Software Updates</li>
                     </ul>
                 </div>
-                <button onclick="openCheckout('personal')" class="mt-8 w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3.5 rounded-xl transition">
+                <a href="https://khubaib60.gumroad.com/l/aishortsstudiopro?variant=Personal%20Creator&wanted=true" class="gumroad-button mt-8 block text-center w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3.5 rounded-xl transition">
                     Purchase Personal License — $29
-                </button>
+                </a>
             </div>
             <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 flex flex-col justify-between">
                 <div>
@@ -109,14 +112,14 @@
                         <li>✓ Priority Email Support & Updates</li>
                     </ul>
                 </div>
-                <button onclick="openCheckout('agency')" class="mt-8 w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3.5 rounded-xl transition">
+                <a href="https://khubaib60.gumroad.com/l/aishortsstudiopro?variant=Studio%20%2F%20Agency&wanted=true" class="gumroad-button mt-8 block text-center w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3.5 rounded-xl transition">
                     Purchase Studio License — $69
-                </button>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Legal Policies Required for Payment Compliance -->
+    <!-- Legal Policies -->
     <section id="policies" class="max-w-4xl mx-auto px-6 py-12 border-t border-slate-900 text-xs text-slate-400 space-y-6">
         <div>
             <h3 class="text-sm font-bold text-slate-200 mb-1">Terms of Service</h3>
@@ -128,7 +131,7 @@
         </div>
         <div>
             <h3 class="text-sm font-bold text-slate-200 mb-1">Privacy Policy</h3>
-            <p>Video transcription and rendering run locally on your Windows PC. We only collect your email address and a hashed hardware identifier (HWID) during license activation to validate your purchase. Payments are securely processed by Paddle.com as Merchant of Record.</p>
+            <p>Video transcription and rendering run locally on your Windows PC. We only collect your email address and a hashed hardware identifier (HWID) during license activation to validate your purchase. Payments are securely processed by Gumroad as Merchant of Record.</p>
         </div>
     </section>
 
@@ -136,26 +139,5 @@
         © 2026 AI Shorts Studio Pro • Operated by Devexibit • Contact: support@devexibit.com
     </footer>
 
-    <script>
-        // Replace these two values once Paddle live credentials are ready
-        const PADDLE_CLIENT_TOKEN = ""; // e.g. "live_xxxxxxxxxxxxxxxxxxxx"
-        const PERSONAL_PRICE_ID = "";   // e.g. "pri_01xxxxxxxxxxxxxxxxxx"
-        const AGENCY_PRICE_ID = "";     // e.g. "pri_01xxxxxxxxxxxxxxxxxx"
-
-        if (PADDLE_CLIENT_TOKEN) {
-            Paddle.Initialize({ token: PADDLE_CLIENT_TOKEN });
-        }
-
-        function openCheckout(tier) {
-            const priceId = tier === "agency" ? AGENCY_PRICE_ID : PERSONAL_PRICE_ID;
-            if (!PADDLE_CLIENT_TOKEN || !priceId) {
-                alert("Checkout is being finalized! Contact support@devexibit.com for early access.");
-                return;
-            }
-            Paddle.Checkout.open({
-                items: [{ priceId: priceId, quantity: 1 }]
-            });
-        }
-    </script>
 </body>
 </html>
